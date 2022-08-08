@@ -8,4 +8,4 @@ Clone this repository
 
 then drag the files into your project and include the filemanagment.h
 
-`#include filewrapper/filemanagment.h`
+`#include filewrapper/wrapper.h`
