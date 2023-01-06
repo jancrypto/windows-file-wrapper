@@ -33,4 +33,6 @@ namespace filemanagment {
 	std::string evaluate_checksum(File f);
 
 	bool exists(File f);
+	
+	std::string get_working_directory();
 }
