@@ -42,10 +42,7 @@ bool filemanagment::write_file(File f, std::string valuesToWrite)
 	HANDLE h = open_file(f, GENERIC_READ | GENERIC_WRITE, FILE_SHARE_READ | FILE_SHARE_WRITE, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL);
 	DWORD dwBytes;
 
-	char str[1024];
-	strcpy(str, valuesToWrite.c_str());
-
-	bool result = WriteFile(h, str, strlen(str), &dwBytes, NULL);
+	bool result = WriteFile(h, valuesToWrite.c_str(), valuesToWrite.length(), &dwBytes, NULL);
 	CloseHandle(h);
 
 	return result;
