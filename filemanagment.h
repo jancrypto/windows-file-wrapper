@@ -28,6 +28,8 @@ namespace filemanagment {
 
 	bool move_file(File f, File newFile);
 
+	bool copy_file(File f, File newFile);
+
 	std::vector<std::string> read_file(File f);
 
 	std::string evaluate_checksum(File f);
