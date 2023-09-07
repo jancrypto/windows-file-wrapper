@@ -68,6 +68,11 @@ bool filemanagment::move_file(File f, File newFile)
 	return MoveFileA(f.GetPath().c_str(), newFile.GetPath().c_str());
 }
 
+bool filemanagment::copy_file(File f, File newFile)
+{
+	return CopyFileA(f.GetPath().c_str(), newFile.GetPath().c_str(), true);
+}
+
 std::vector<std::string> filemanagment::read_file(File f)
 {
 	if (!exists(f)) {
